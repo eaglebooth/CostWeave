@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+  "subject": "CostWeave control resources",
+  "controls": [
+    {"id":"wrong-section","purpose_class":"cross-object-negative","resource":"synthetic XML derived from the pinned fixture with section 200.404","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"cross-container","purpose_class":"cross-object-negative","resource":"synthetic XML with empty 200.403 container and valid-looking content outside it","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"missing-rule","purpose_class":"malformed-negative","resource":"synthetic XML missing criterion h","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"duplicate-rule","purpose_class":"malformed-negative","resource":"synthetic XML duplicating criterion a","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"oversized-source","purpose_class":"boundary-negative","resource":"synthetic payload over 16000 bytes","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"bad-utf8","purpose_class":"malformed-negative","resource":"synthetic invalid UTF-8 payload","authoritative":false,"expected":"REVIEW_REQUIRED; empty source_digest"},
+    {"id":"same-url-changed-valid","purpose_class":"changed-content-negative","resource":"synthetic structurally valid 200.403 XML with changed criterion text","authoritative":false,"digest_algorithm":"SHA-256 over canonical ASCII JSON","expected":"SOURCE_DIGEST_MISMATCH; exact state rollback"},
+    {"id":"http-unavailable","purpose_class":"unavailable-control","resource":"mocked HTTP 301, 404, 429, and 500","authoritative":false,"expected":"REVIEW_REQUIRED; full amount in review_total"},
+    {"id":"wrong-source-digest","purpose_class":"digest-negative","resource":"64 lowercase zero characters","authoritative":false,"expected":"SOURCE_DIGEST_MISMATCH; exact state rollback"},
+    {"id":"stale-generation","purpose_class":"replay-control","resource":"generation 0 repeated after compilation","authoritative":false,"expected":"BATCH_NOT_COMPILABLE; exact state unchanged"},
+    {"id":"wrong-actor","purpose_class":"authorization-negative","resource":"non-reviewer acceptance and non-consumer consumption","authoritative":false,"expected":"role error; exact state unchanged"}
+  ]
+}

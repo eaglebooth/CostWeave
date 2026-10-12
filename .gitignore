@@ -1,0 +1,8 @@
+.env
+.env.*
+__pycache__/
+.pytest_cache/
+pytest-cache-files-*/
+artifacts/
+docs/local-evidence/
+

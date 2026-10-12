@@ -1,0 +1,40 @@
+{
+  "resource_id": "ecfr-2-cfr-200-403-2026-10-08",
+  "purpose_class": "positive_authoritative_source",
+  "purpose": "Point-in-time general cost declaration criteria",
+  "canonical_origin": "https://www.ecfr.gov",
+  "authoritative_owner": "Office of the Federal Register / eCFR",
+  "authority": "Electronic Code of Federal Regulations (authoritative but unofficial)",
+  "repository_and_object_id": "ecfr.gov API; title 2; part 200; section 200.403",
+  "object_id": "2 CFR 200.403",
+  "source_revision": "2026-10-08",
+  "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-10-08/title-2.xml?part=200&section=200.403",
+  "content_type": "text/xml",
+  "retrieved_at": "2026-10-12T08:42:53.316322+00:00",
+  "availability_checked_at": "2026-10-12T08:42:53.316322+00:00",
+  "mutability": "point-in-time dated endpoint",
+  "digest_algorithm": "SHA-256 over raw bytes and SHA-256 over canonical ASCII JSON",
+  "raw_sha256": "c125fb897d8b427d8de83b6493809b373d32cf2c3a0cd8d3d81bd068b4379458",
+  "canonical_sha256": "649504d4ff4c3d1d57893b4fe7b68937239b22f65c16e23c9349c870eee96947",
+  "predeclared_facts": {
+    "citation": "2 CFR 200.403",
+    "criteria_keys": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h"
+    ]
+  },
+  "expected_result": "parser accepts exact section and eight criteria",
+  "cannot_prove": [
+    "actual expense facts",
+    "award-specific restrictions",
+    "accounting records",
+    "legal allowability",
+    "payment"
+  ]
+}

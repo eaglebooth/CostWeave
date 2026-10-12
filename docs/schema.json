@@ -1,0 +1,124 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "accept_batch": {
+      "params": [
+        [
+          "batch_id",
+          "string"
+        ],
+        [
+          "expected_snapshot_digest",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "compile_allocation": {
+      "params": [
+        [
+          "batch_id",
+          "string"
+        ],
+        [
+          "expected_generation",
+          "int"
+        ],
+        [
+          "expected_source_digest",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "consume_compilation": {
+      "params": [
+        [
+          "batch_id",
+          "string"
+        ],
+        [
+          "expected_generation",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "any",
+      "payable": false
+    },
+    "create_batch": {
+      "params": [
+        [
+          "local_id",
+          "string"
+        ],
+        [
+          "reviewer",
+          "string"
+        ],
+        [
+          "consumer",
+          "string"
+        ],
+        [
+          "effective_date",
+          "string"
+        ],
+        [
+          "denomination",
+          "string"
+        ],
+        [
+          "lines_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_batch": {
+      "params": [
+        [
+          "batch_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_observation": {
+      "params": [
+        [
+          "batch_id",
+          "string"
+        ],
+        [
+          "generation",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_version": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    }
+  }
+}
